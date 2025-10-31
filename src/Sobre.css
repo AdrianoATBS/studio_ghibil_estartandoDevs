@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.descricao {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.nome {
+  color: #222;
+  font-weight: bold;
+}
+
+.funcao {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.rodape {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #999;
+}
