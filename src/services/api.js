@@ -1,15 +1,17 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseUrl: 'https://ghibliapi.vercel.app/',
+  baseURL: 'https://ghibliapi.vercel.app/',
 });
 
 export const getAllFilms = async () => {
-  const response = await api.get('films');
-  return response;
+    const response = await api.get('films');
+    return response.data; 
+
 }
 
-export const getFilmById = async () => {
-  const response = await api.get('films/id');
-  return response;
+export const getFilmById = async (id) => {
+    const response = await api.get(`films/${id}`);
+    return response.data;
+ 
 }

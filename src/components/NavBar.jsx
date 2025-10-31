@@ -3,7 +3,7 @@ import '../style/NavBar.css';
 
 export default function NavBar() {
     return (
-        <nav className='navBar'>
+        <nav className='navbar'>
             <ul>
                 <li><Link className='/' to="/">Home</Link></li>
                 <li><Link to="/animacoes">Animação</Link></li>
