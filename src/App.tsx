@@ -5,7 +5,6 @@ import Sobre from './pages/Sobre'
 import Animacoes from './pages/Animacoes'
 import Detalhes from './pages/Detalhes'
 import NavBar from './components/NavBar'
-
 function App() {
 
   return (
