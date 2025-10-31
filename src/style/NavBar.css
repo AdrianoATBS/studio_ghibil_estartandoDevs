@@ -1,4 +1,4 @@
-.navBar{
+.navbar{
   background-color: #ff1a1aff;
   height: 80px;
   display: flex;
@@ -7,14 +7,14 @@
   padding: 0 20px;
   width: 100%;
 }
-.navBar ul{
+.navbar ul{
   list-style: none;
   display: flex;
   gap: 15px; 
 
 }
 
-.navBar a{
+.navbar a{
   text-decoration: none;
   color: white;
   display: block;

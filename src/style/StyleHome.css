@@ -1,0 +1,36 @@
+.home{
+    text-align: center;
+    margin-top: 30px;
+}
+.bem-vindo{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.filmes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filme-card{
+    width: 350px;
+    padding: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.filme-card img{
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.filme-card h2{
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.filme-card p{
+
+    font-size: 1rem;
+    margin: 5px 0;
+}
