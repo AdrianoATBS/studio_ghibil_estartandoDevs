@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getAllFilms } from '../services/api';
+import { useEffect, useState } from "react";
+import { getAllFilms } from "../services/api";
+import { AnimationCard } from "../components/AnimationCard";
 const Animacoes = () => {
   const [films, setFilms] = useState([]);
 
@@ -9,24 +10,20 @@ const Animacoes = () => {
         const response = await getAllFilms();
         setFilms(response);
       } catch (err) {
-        console.error('Erro ao buscar filmes:', err);
+        console.error("Erro ao buscar filmes:", err);
       }
-    }
+    };
 
-    filmes()
+    filmes();
   }, []);
 
   return (
-
     <section>
       {films.map((film) => (
-        <div key={film.id}>
-        <img src={film.image} alt="" />
-        <h1>{film.title}</h1>
-        </div>
+        <AnimationCard key={film.id} img={film.image} title={film.title} />
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default Animacoes
+export default Animacoes;
