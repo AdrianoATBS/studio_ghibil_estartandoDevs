@@ -7,7 +7,6 @@ export default function NavBar() {
             <ul>
                 <li><Link className='/' to="/">Home</Link></li>
                 <li><Link to="/animacoes">Animação</Link></li>
-                <li><Link to="/detalhes">Detalhes</Link></li>
                 <li><Link to="/sobre">Sobre</Link></li>
             </ul>
         </nav>

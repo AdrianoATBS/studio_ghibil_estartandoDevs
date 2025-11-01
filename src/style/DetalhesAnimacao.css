@@ -1,0 +1,17 @@
+.card-detalhes {
+  width: 30rem;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  background-color: #f44336; 
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+}
+.imagem-filme {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}

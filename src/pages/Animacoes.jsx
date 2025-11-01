@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllFilms } from "../services/api";
 import AnimationCard from "../components/AnimationCard";
+import { Link } from "react-router-dom";
 import "../style/AnimacoesPage.css"
 
 const Animacoes = () => {
@@ -22,8 +23,11 @@ const Animacoes = () => {
   return (
     <section className="animacoes-section">
       {films.map((film) => (
-        <AnimationCard key={film.id} img={film.image} title={film.title} />
+        <Link key={film.id} to={`/animacoes/${film.id}`}>
+          <AnimationCard img={film.image} title={film.title} />
+        </Link>
       ))}
+
     </section>
   );
 };
