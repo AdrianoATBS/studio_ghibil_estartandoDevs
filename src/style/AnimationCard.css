@@ -1,0 +1,30 @@
+.animation-card {
+  width: 10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f44336; /* tom de vermelho mais suave */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.animation-card:hover {
+  transform: scale(1.05);
+}
+
+.animation-image {
+  width: 100%;
+  max-width: 8rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+
+.animation-title {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}
