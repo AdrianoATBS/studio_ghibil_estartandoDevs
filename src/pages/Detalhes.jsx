@@ -2,9 +2,11 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getFilmById } from "../services/api";
 import '../style/DetalhesAnimacao.css';
+import Loader from "../components/Loader";
 export default function Detalhes() {
     const {id} = useParams();
     const[filme, setFilme] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() =>{
         const fetchFilmesDetails = async () =>{
@@ -13,12 +15,17 @@ export default function Detalhes() {
                 setFilme(response);
             }catch(err){
                 console.error("Erro ao buscar detalhes do filme:", err);
+            }finally{
+                setLoading(false);
             }
         }
 
         fetchFilmesDetails();
     }, [id]);
    
+    if(loading){
+        return <Loader />;
+    }
 
     return (
         <div className="card-detalhes">

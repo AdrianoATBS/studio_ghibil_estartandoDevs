@@ -3,9 +3,10 @@ import { getAllFilms } from "../services/api";
 import AnimationCard from "../components/AnimationCard";
 import { Link } from "react-router-dom";
 import "../style/AnimacoesPage.css"
-
+import Loader from "../components/Loader";
 const Animacoes = () => {
   const [films, setFilms] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const filmes = async () => {
@@ -14,11 +15,17 @@ const Animacoes = () => {
         setFilms(response);
       } catch (err) {
         console.error("Erro ao buscar filmes:", err);
+      } finally {
+        setLoading(false);
       }
     };
 
     filmes();
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <section className="animacoes-section">
