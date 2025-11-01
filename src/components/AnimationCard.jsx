@@ -1,10 +1,12 @@
-export const AnimationCard = ({ title, img }) => {
+import "../style/AnimationCard.css";
+
+const AnimationCard = ({ title, img }) => {
 
 
   return (
-    <section>
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
+    <section className="animation-card">
+      <img src={img} alt={title} className="animation-image" />
+      <h2 className="animation-title">{title}</h2>
     </section>
   );
 };

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getAllFilms } from "../services/api";
-import { AnimationCard } from "../components/AnimationCard";
+import AnimationCard from "../components/AnimationCard";
+import "../style/AnimacoesPage.css"
+
 const Animacoes = () => {
   const [films, setFilms] = useState([]);
 
@@ -18,7 +20,7 @@ const Animacoes = () => {
   }, []);
 
   return (
-    <section>
+    <section className="animacoes-section">
       {films.map((film) => (
         <AnimationCard key={film.id} img={film.image} title={film.title} />
       ))}
